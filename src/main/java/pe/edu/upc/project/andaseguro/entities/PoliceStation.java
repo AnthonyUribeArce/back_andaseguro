@@ -10,10 +10,10 @@ public class PoliceStation implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPoliceStation;
+    private int idPolicestation;
 
     @Column(name = "NPoliceStation", length = 45, nullable = false)
-    private String NPoliceStation;
+    private String npolicestation;
 
     @Column(name = "TCell", length = 10, nullable = false)
     private long TCell;
@@ -25,32 +25,34 @@ public class PoliceStation implements Serializable{
     public PoliceStation() {
     }
 
-    public PoliceStation(int idPoliceStation, String NPoliceStation, long TCell, Direction direction) {
-        this.idPoliceStation = idPoliceStation;
-        this.NPoliceStation = NPoliceStation;
+    public PoliceStation(int idPolicestation, String npolicestation, long TCell, Direction direction) {
+        this.idPolicestation = idPolicestation;
+        this.npolicestation = npolicestation;
         this.TCell = TCell;
         this.direction = direction;
     }
 
-    public int getIdPoliceStation() {
-        return idPoliceStation;
+
+    public int getIdPolicestation() {
+        return idPolicestation;
     }
 
-    public String getNPoliceStation() {
-        return NPoliceStation;
+    public void setIdPolicestation(int idPolicestation) {
+        this.idPolicestation = idPolicestation;
+    }
+
+    public String getNpolicestation() {
+        return npolicestation;
+    }
+
+    public void setNpolicestation(String npolicestation) {
+        this.npolicestation = npolicestation;
     }
 
     public long getTCell() {
         return TCell;
     }
 
-    public void setIdPoliceStation(int idPoliceStation) {
-        this.idPoliceStation = idPoliceStation;
-    }
-
-    public void setNPoliceStation(String NPoliceStation) {
-        this.NPoliceStation = NPoliceStation;
-    }
 
     public void setTCell(long TCell) {
         this.TCell = TCell;

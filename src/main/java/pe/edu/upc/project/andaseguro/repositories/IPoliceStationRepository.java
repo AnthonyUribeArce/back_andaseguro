@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface IPoliceStationRepository extends JpaRepository<PoliceStation, Integer> {
 
-    @Query("from PoliceStation p where p.NPoliceStation like %:NPoliceStation%")
-    List<PoliceStation> searchName(@Param("NPoliceStation")String NPoliceStation);
+    @Query("from PoliceStation p where p.npolicestation like %:npolicestation%")
+    List<PoliceStation> searchName(@Param("npolicestation")String npolicestation);
 }
